@@ -1,7 +1,5 @@
 
-.cards {
-    display: flex;
-    flex-Wrap: wrap;
+.cards{
     background-color: aquamarine;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
