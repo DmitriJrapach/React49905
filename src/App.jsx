@@ -1,17 +1,15 @@
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { MainRouter } from "./router/MainRouter";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import MainRouter from "./router/MainRouter";
+import { CartProvider } from "./context/CartContext";
 
 const App = () => {
-
   return (
-    <div>
-      <MainRouter />      
+    <div style={{ width: "100vw", height: "100vh" }}>
+      <CartProvider>
+        <MainRouter />
+      </CartProvider>
     </div>
   );
 };
 
 export default App;
-
-

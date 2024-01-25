@@ -1,19 +1,27 @@
-
-import { useEffect } from 'react';
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
-import { useGetProducts } from '../hooks/useProducts';
-
+// import { useEffect } from "react";
+import ItemListContainer from "../components/ItemListContainer";
+import { useGetProducts } from "../hooks/useProducts";
 export const Home = () => {
+  const { productsData } = useGetProducts('products');
+  // useEffect(() => {
+  //   const myDiv = document.getElementById("root");
+  //   myDiv.addEventListener("click", () => {
+  //     console.log("clicking");
+  //   });
 
-  // Setear titulo de pagina
-  useEffect(() => {
-    document.title = "Mi tienda online - Home";
-  })
+  //   document.addEventListener("click", () => {
+  //     console.log("scrolling");
+  //   });
 
-    const { productsData } = useGetProducts(10);
+  //   return () => {
+  //     myDiv.removeEventListener("click", () => {
+  //       console.log("clicking");
+  //     });
+  //     document.removeEventListener("click", () => {
+  //       console.log("scrolling");
+  //     });
+  //   };
+  // });
 
-
-  return (
-    <ItemListContainer productsData={productsData} />
-  )
-}
+  return <ItemListContainer productsData={productsData} />;
+};
