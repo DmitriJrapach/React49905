@@ -1,12 +1,1 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
-# React49905
->>>>>>> 4f9312f1425a02b092253d317cfa7ece4d73b251
+entrega de proyecto final, intente varias coas para q renderizen bien los productos selecionados onclick en las categorias, pero no me salio, ni tampoco q renderizen bien en el cart, si pude solucionar q renderizen productos individuales en el cart. Intente ponerle botones al cartwidget , pero lo unico q logre es me resten o sumen el numero de los productos final , y encima me dejaban de andar los botones  de los productos seleccionados, asi q tambien los elimine. Al final quedo todo casi igual a lo q dejo el profe, salvo q renderiza el producto individual agregado al cart.
