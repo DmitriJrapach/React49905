@@ -22,19 +22,25 @@ export const useGetProducts = (collectionName = "products") => {
   return { productsData };
 };
 
+
+
 export const useGetProductById = (collectionName = "products", id) => {
-  const [productData, setProductData] = useState([]);
+  const [productData, setProductData] = useState({});
 
   useEffect(() => {
+    console.log("Fetching product with ID:", id);
     const db = getFirestore();
-
-    const docRef = doc(db, collectionName, id)
-
+    const docRef = doc(db, collectionName, id);
+  
     getDoc(docRef).then((doc) => {
-      setProductData({ id: doc.id, ...doc.data() })
-    })
-
-  }, [id]);
+      console.log("Fetched document:", doc.data());
+      if (doc.exists()) {
+        setProductData({ id: doc.id, ...doc.data() });
+      } else {
+        console.log("No such document!");
+      }
+    });
+  }, [collectionName, id]);
 
   return { productData };
 };
