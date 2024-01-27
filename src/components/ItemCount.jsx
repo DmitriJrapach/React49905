@@ -13,7 +13,9 @@ const ItemCount = ({ productId }) => {
   };
 
   const handleRemove = () => {
-    setCountItem(countItem - 1);
+    if (countItem > 1) {
+      setCountItem(countItem - 1);
+    }
   };
 
   const handleAddProductToCart = () => {
